@@ -5,9 +5,8 @@
 {% block content %}
 <div class="columns">
 	<div class="column is-half">
-		<h1 class="title">Newspring Staff Enneagrams</h1>
 		<h2 class="subtitle">A code was emailed to the address below</h2>
-		<form action="{{url_for("index")}}" method="post">
+		<form method="post">
 			<div class="field">
 				<div class="control">
 					<input class="input is-static" type="text" name="email" value="{{email}}" readonly>
@@ -15,7 +14,7 @@
 			</div>
 			<div class="field">
 				<div class="control">
-					<input class="input" type="text" placeholder="Code" required>
+					<input class="input" type="text" placeholder="Code" name="code" required>
 				</div>
 			</div>
 			<div class="field">

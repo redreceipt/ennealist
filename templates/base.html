@@ -9,17 +9,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 
     <!-- Custom CSS -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
-    />
+    /> -->
+
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
     <section class="section">
-    <div class="container">
-      {% block content %}{% endblock %}
-    </div>
+      <div class="container">
+        <nav class="level">
+            <div class="level-left">
+                <h1 class="title">Newspring Staff Enneagrams</h1>
+            </div>
+            <div class="level-right">
+              {% block links %}{% endblock %}
+            </div>
+        </nav>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        {% block content %}{% endblock %}
+      </div>
     </section>
   </body>
 </html>
